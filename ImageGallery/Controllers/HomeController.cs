@@ -16,7 +16,7 @@ namespace ImageGallery.Controllers
             DirectoryInfo directory = new DirectoryInfo(Server.MapPath("~/Content/Images/"));
             FileInfo[] files = directory.GetFiles("*.jpg");
 
-            if ((page-1) * pageSize > files.Length || page < 1) page = 1;
+            if ((page-1) * pageSize > files.Length || page < 1) return RedirectToAction("Index");
             
             var viewModel = new ImageListViewModel
             {

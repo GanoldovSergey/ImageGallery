@@ -158,18 +158,56 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\1427114chan1317403213792.jpg" />
+    <Content Include="Content\Images\180319699.jpg" />
+    <Content Include="Content\Images\19-kosmos-oboi-kartinki-foto-1920x1080.jpg" />
+    <Content Include="Content\Images\1920_1080_201409030121101140803.jpg" />
+    <Content Include="Content\Images\2039_1436438.jpg" />
+    <Content Include="Content\Images\5.jpg" />
+    <Content Include="Content\Images\6351504c371f2c869e22d061b34cf90d.jpg" />
+    <Content Include="Content\Images\artleo.com-39713.jpg" />
+    <Content Include="Content\Images\battlefield-4-01-Hd-wallpaper.jpg" />
+    <Content Include="Content\Images\Dishonored-2.jpg" />
+    <Content Include="Content\Images\full1_metro_last_light.jpg" />
+    <Content Include="Content\Images\look.com.ua-127708.jpg" />
+    <Content Include="Content\Images\mech-shlem-bronya-dark-souls-plamya-rycar.jpg" />
+    <Content Include="Content\Images\molniya_groza_stihiya_pepel_vulkan_1920x1080.jpg" />
+    <Content Include="Content\Images\mota_ru_1010708-1920x1080.jpg" />
+    <Content Include="Content\Images\oboi-na.ru_wallpapers_20090808_022_resized_1920x1080.jpg" />
+    <Content Include="Content\Images\onpape.com-68521101.jpg" />
+    <Content Include="Content\Images\post-apocalyptic-обои-для-рабочего-стола-песочница-1408629.jpeg" />
+    <Content Include="Content\Images\Tipichny_Doter.png" />
+    <Content Include="Content\Images\video-game-ocean-war-warship-1920x1080.jpg" />
+    <Content Include="Content\Images\wallpaper-2824374.jpg" />
+    <Content Include="Content\Images\wallpaper-3004759.jpg" />
+    <Content Include="Content\Images\wall_30.jpg" />
+    <Content Include="Content\Images\z6T2_KwGhW0.jpg" />
+    <Content Include="Content\Images\zAKSHhmnXK-1920x1080.jpg" />
+    <Content Include="Content\Images\ZmYeSmMCO1E.jpg" />
+    <Content Include="Content\Images\космос-на-стол.jpg" />
+    <Content Include="Content\Images\обои-красивые-картинки-Sci-Fi-art-арт-2293753.jpeg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -198,12 +236,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Images\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
