@@ -1,16 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ImageGallery.Models;
 
 namespace ImageGallery.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        private int pageSize = 4;
+        public ActionResult Index(int page = 1)
         {
-            return View();
+            DirectoryInfo directory = new DirectoryInfo(Server.MapPath("~/Content/Images/"));
+            FileInfo[] files = directory.GetFiles("*.jpg");
+
+            if ((page-1) * pageSize > files.Length || page < 1) page = 1;
+            
+            var viewModel = new ImageListViewModel
+            {
+                ImageNames = files.Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .Select(x => x.Name),
+
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = page,
+                    ItemsPerPage = pageSize,
+                    TotalItems = files.Length
+                }
+            };
+            return View(viewModel);
         }
 
         public ActionResult About()
