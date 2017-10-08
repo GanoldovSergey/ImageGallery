@@ -5,18 +5,17 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="container row">
-    @foreach (var item in Model.ImageNames)
-    {
-        <div class="col-md-5" style="margin: 20px; background-color: #e2c8c8">
-            <img class="img-responsive img-rounded" src="~/Content/Images/@item" style="padding: 10px" />
+@Styles.Render("~/Content/lightbox.css")
+@Styles.Render("~/Content/Site.css")
 
-            <div> @item</div>
 
-        </div>
-    }
+@using (Ajax.BeginForm("Gallery", "Home", new AjaxOptions { UpdateTargetId = "result" }))
+{
+<div id="result">
+    @Html.Action("Gallery","Home",Model.PagingInfo.CurrentPage)
 </div>
+}
 
-<div class="pager">
-    @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index", new { page = x }))
-</div>
+@Scripts.Render("~/Scripts/jquery-1.10.2.js")
+@Scripts.Render("~/Scripts/lightbox-plus-jquery.js")
+@Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.js")

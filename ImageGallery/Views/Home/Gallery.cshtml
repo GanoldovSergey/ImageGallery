@@ -1,0 +1,28 @@
+﻿@using ImageGallery.HtmlHelpers
+@model ImageGallery.Models.ImageListViewModel
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="container row">
+        @foreach (var item in Model.ImageNames)
+        {
+            <div class="col-md-5" style="margin: 20px; background-color: #e2c8c8" id="result">
+                <a href="~/Content/Images/@item" data-lightbox="images" data-title="My caption">
+                    <img class="img-responsive img-rounded" src="~/Content/ImagesSmall/@item" style="padding: 10px" />
+                </a>
+                <div> @item</div>
+
+            </div>
+        }
+    </div>
+    <div class="pager">
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index", new { page = x }))
+    </div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

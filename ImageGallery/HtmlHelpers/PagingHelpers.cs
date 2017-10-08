@@ -18,9 +18,10 @@ namespace ImageGallery.HtmlHelpers
             var result = new StringBuilder();
             for (int i = 1; i <= pagingInfo.TotalPages; i++)
             {
-                var tag = new TagBuilder("a");
-                tag.MergeAttribute("href", pageUrl(i));
-                tag.InnerHtml = i.ToString(CultureInfo.InvariantCulture);
+                var tag = new TagBuilder("input");
+                tag.MergeAttribute("type", "submit");
+                tag.MergeAttribute("name", "page");
+                tag.MergeAttribute("value", $"{i}");
                 if (i == pagingInfo.CurrentPage)
                     tag.AddCssClass("selected");
                 result.Append(tag);
